@@ -640,6 +640,11 @@ tab1_content =html.Div([
                         ]
                     ),
                     className="mt-3",
+                    style={
+                                    # 'padding-top': 20,
+                                    # 'padding-bottom': 20,
+                                    "height": 700,
+                                }
                 )])
 tab2_content = html.Div([ dbc.Card(
                 dbc.CardBody(
@@ -658,6 +663,11 @@ tab2_content = html.Div([ dbc.Card(
                     ])
                 ),
                 className="mt-3",
+                style={
+                # 'padding-top': 20,
+                # 'padding-bottom': 20,
+                "height": 700,
+            }
             )])
 
 
