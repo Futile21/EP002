@@ -27,12 +27,12 @@ CSIR_LC_2019_P2 = (CSIR_LC_2019_P * 0.8).round(1)
 CSIR_LC_2019_E2 = (CSIR_LC_2019_E * 0.8).round(1)
 
 powerlist = list(CSIR_LC_2019_E.columns)
-print(powerlist)
+# print(powerlist)
 removelist = [powerlist[0], powerlist[11], powerlist[13]]
 removelist
 
 for i in removelist:
-    print(f'remove {i}')
+    # print(f'remove {i}')
     powerlist.remove(i)
 
 tracebar = []  # colorcop
@@ -396,8 +396,8 @@ Powerlayout_oneyear = {
 PowerGraphs_oneyear = html.Div([
         dcc.Graph(id="PowerGraphs_oneyear", figure=dict(data=tracebar, layout=Powerlayout))
         ], style={
-            # 'padding-top': 20,
-            # 'padding-bottom': 20,
+            'padding-top': 20,
+            'padding-bottom': 20,
             # "width": '100%',
             # "height": '100',
 
@@ -531,7 +531,7 @@ PieData = [
         # "scalegroup":'one',
     }]
 
-# make frames
+# make framesf
 
 PieFrames = []
 for year in years:
@@ -730,9 +730,9 @@ app.layout = html.Div(children=[
 @app.callback(Output("PowerGraphs", "figure"),
               [Input('DropdownCase', 'value'),],)
 def updatePowerGraph(DropdownValue):
-    print("hey")
-    print(f'DropdownValue is {DropdownValue}')
-    print("hey 2")
+    # print("hey")
+    # print(f'DropdownValue is {DropdownValue}')
+    # print("hey 2")
     # print(f'DropdownValue is {sliderValue}')
     # print(f'DropdownValue is {type(sliderValue)}')
     # print(f'SwitchesValue is {switchesValue}')
@@ -783,9 +783,9 @@ def updatePowerGraph(DropdownValue):
                   # State("RadioPower", "value"),
               ], )
 def updatePowerGraph_oneYear(DropdownValue, sliderValue):
-    print("hey 4")
-    print(f'DropdownValue is {DropdownValue}')
-    print("hey 5")
+    # print("hey 4")
+    # print(f'DropdownValue is {DropdownValue}')
+    # print("hey 5")
 
     #######################################
 
@@ -839,7 +839,7 @@ def updatePowerGraph_oneYear(DropdownValue, sliderValue):
               ], )
 def updateMapRSA(DropdownValue, radios_inputPie):
     #######################################
-    print(f' the pie {DropdownValue} and {radios_inputPie}')
+    # print(f' the pie {DropdownValue} and {radios_inputPie}')
     scenariosDict[DropdownValue]
     DF_Pie = scenariosDict[DropdownValue][radios_inputPie]
 
